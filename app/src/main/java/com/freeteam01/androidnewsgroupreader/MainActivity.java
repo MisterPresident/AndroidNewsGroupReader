@@ -101,7 +101,7 @@ public class MainActivity extends AppCompatActivity implements AzureServiceEvent
                 if (result.isLoggedIn()) {
                     // login succeeded
                     Log.d("AzureService", "LoginActivity - login succeeded");
-                    createAndShowDialog(String.format("You are now logged in - %1$2s", AzureService.getInstance().getClient().getCurrentUser().getUserId()), "Success");
+//                    createAndShowDialog(String.format("You are now logged in - %1$2s", AzureService.getInstance().getClient().getCurrentUser().getUserId()), "Success");
 
                     AzureService.getInstance().OnAuthenticated();
 
@@ -445,7 +445,6 @@ public class MainActivity extends AppCompatActivity implements AzureServiceEvent
                 showOption(R.id.action_login);
                 createAndShowDialog("Successfully logged out", "Success");
                 finish();
-                System.exit(0);
                 return true;
             case R.id.action_login:
                 AzureService.getInstance().authenticate();
